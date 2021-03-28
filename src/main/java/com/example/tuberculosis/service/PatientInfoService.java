@@ -19,5 +19,7 @@ public interface PatientInfoService {
    void updatePatientInfo(PatientUserForm.UpdatePatient updatePatient);
    PageResult<PatientUserForm.Patient> getList(Paging paging, List<String> queryString, List<String> orderBys,User kUser);
    PatientUserForm.Patient getDetail(Integer patientId);
+   List<PatientUser> getPatentInfo(Integer uId);
+
 
 }

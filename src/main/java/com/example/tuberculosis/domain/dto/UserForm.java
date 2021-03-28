@@ -53,6 +53,17 @@ public class UserForm {
     }
 
     @Data
+    @ApiModel(value = "user.pateint",description = "用户表病人信息")
+    public static class UserPatient extends BaseBean {
+        @ApiModelProperty(value = "用户ID")
+        private Integer id;
+        @ApiModelProperty(value = "用户昵称")
+        private String nickname;
+        @ApiModelProperty(value = "用户账号")
+        private String account;
+    }
+
+    @Data
     @ApiModel(value = "user.add",description = "新增用户信息")
     public static class AddUser extends BaseBean {
         @ApiModelProperty(value = "用户昵称")

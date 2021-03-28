@@ -119,4 +119,10 @@ public class PatientUserServiceImpl implements PatientInfoService {
         return patient;
     }
 
+    @Override
+    public List<PatientUser> getPatentInfo(Integer uId) {
+               List<PatientUser> patientUserList = patientInfDao.findByDoctorNumAndDelFlag(uId,1);
+               return patientUserList;
+    }
+
 }
