@@ -38,8 +38,8 @@ public class CodeController {
         List<BaseValue> bList = new ArrayList<>();
         for(User user:userService.getUser(roleType)){
             BaseValue baseValue=new BaseValue();
-            baseValue.setKey(String.valueOf(user.getId()));
-            baseValue.setValue(user.getAccount());
+            baseValue.setKey((user.getAccount()));
+            baseValue.setValue(user.getNickname());
             bList.add(baseValue);
         }
         return new ResponseResult(true, "请求成功", bList);
