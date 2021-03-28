@@ -49,8 +49,6 @@ public class PatientUserForm {
         private String description;
         @ApiModelProperty(value = "病情判断")
         private String judge;
-        @ApiModelProperty(value = "病人账户")
-        private String account;
         @ApiModelProperty(value = "病人id")
         private Integer patientNum;
     }
