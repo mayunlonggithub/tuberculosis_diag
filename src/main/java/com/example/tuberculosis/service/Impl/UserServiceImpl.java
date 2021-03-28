@@ -136,6 +136,7 @@ public class UserServiceImpl implements UserService {
         if(roleType==Constant.PATIENT || roleType==Constant.ADMIN){
             user = BeanPropertyCopyUtils.copy(addTUser,User.class);
             user.setRoleType(roleType);
+            user.setIfAccess(Constant.ACCESS);
             user.setPassword(MD5Utils.Encrypt(user.getPassword(), true));
             user.setDelFlag(1);
             userDao.save(user);

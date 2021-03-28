@@ -26,7 +26,7 @@ public interface TuberImageService {
      * @return 成功的id
      * @throws IOException
      */
-    Integer createOrUpdate(Integer doctorNum, Integer patientNum, MultipartFile[] file,String diagnosisRecord) throws IOException;
+    void createOrUpdate(Integer doctorNum, Integer patientNum, MultipartFile file,String diagnosisRecord) throws IOException;
 
     /**
      * 模型运行，调用python

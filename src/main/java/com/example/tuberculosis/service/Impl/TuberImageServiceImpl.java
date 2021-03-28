@@ -52,11 +52,10 @@ public class TuberImageServiceImpl implements TuberImageService {
 
 
     @Override
-    public Integer createOrUpdate(Integer doctorNum, Integer patientNum, MultipartFile[] fileList,String diagnosisRecord) throws IOException {
+    public void createOrUpdate(Integer doctorNum, Integer patientNum, MultipartFile file,String diagnosisRecord) throws IOException {
         Map<File, MultipartFile> toSave = new HashMap<>(1);
-        for(MultipartFile file:fileList) {
-            String fileName = file.getOriginalFilename();
-            if (null != fileName) {
+        String fileName = file.getOriginalFilename();
+        if (null != fileName) {
                 fileName = fileName.substring(fileName.lastIndexOf("\\") + 1);
                 fileName = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()) + "_" + fileName;
             }
@@ -74,11 +73,10 @@ public class TuberImageServiceImpl implements TuberImageService {
                 path.getParentFile().mkdirs();
             }
             toSave.put(path, file);
-        }
         for (Map.Entry<File, MultipartFile> entry : toSave.entrySet()) {
             FileUtils.writeByteArrayToFile(entry.getKey(), entry.getValue().getBytes());
         }
-        return fileList.length;
+        return;
     }
 
 //    @Override

@@ -52,11 +52,11 @@ public class TuberImageController {
 
     @ApiOperation(value = "图片上传", produces = "application/json;charset=utf-8")
     @PostMapping(value = "/upload",consumes = "multipart/form-data")
-    public ResponseResult<Void>  createOrUpdate(@RequestParam MultipartFile[] file, @RequestParam @NotNull Integer patientNum,HttpServletRequest request,@RequestParam String diagnosisRecord) throws IOException {
+    public ResponseResult<Void>  createOrUpdate(@RequestParam MultipartFile file, @RequestParam @NotNull Integer patientNum,HttpServletRequest request,@RequestParam String diagnosisRecord) throws IOException {
         User kUser = (User) request.getSession().getAttribute(Constant.SESSION_ID);
         Assert.notNull(kUser,"未登录或登录已失效，请重新登录");
-        Integer upLoadNumber=tuberImageService.createOrUpdate(kUser.getId(), patientNum, file,diagnosisRecord);
-        return new ResponseResult(true,"请求成功",upLoadNumber);
+        tuberImageService.createOrUpdate(kUser.getId(), patientNum, file,diagnosisRecord);
+        return new ResponseResult(true,"请求成功");
     }
 
     @ApiOperation(value = "智能分析")
