@@ -39,15 +39,16 @@ public class CodeController {
 
     @GetMapping("/getUser")
     @ApiOperation(value = "获取所有病人账户", produces = "application/json;charset=utf-8")
-    public ResponseResult<List<BaseValue>> getUser(HttpServletRequest request) {
+    public ResponseResult<List<UserForm.UserPatient>> getUser(HttpServletRequest request) {
         User kUser = (User) request.getSession().getAttribute(Constant.SESSION_ID);
         Assert.notNull(kUser,"未登录或登录已失效，请重新登录");
-        List<BaseValue> bList = new ArrayList<>();
+        List<UserForm.UserPatient> bList = new ArrayList<>();
         for(User user:userService.getUser(Constant.PATIENT)){
-            BaseValue baseValue=new BaseValue();
-            baseValue.setKey((user.getAccount()));
-            baseValue.setValue(user.getNickname());
-            bList.add(baseValue);
+            UserForm.UserPatient userPatient = new UserForm.UserPatient();
+            userPatient.setId(user.getId());
+            userPatient.setAccount(user.getAccount());
+            userPatient.setNickname(user.getNickname());
+            bList.add(userPatient);
         }
         return new ResponseResult(true, "请求成功", bList);
     }

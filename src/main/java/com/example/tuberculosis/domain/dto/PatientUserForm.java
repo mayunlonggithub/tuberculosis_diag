@@ -39,6 +39,8 @@ public class PatientUserForm {
         private String phone;
         @ApiModelProperty(value = "病人身份证号码")
         private String account;
+        @ApiModelProperty(value = "病人Num")
+        private int patientNum;
 
     }
 

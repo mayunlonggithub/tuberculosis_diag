@@ -80,6 +80,7 @@ public class PatientUserServiceImpl implements PatientInfoService {
             PatientUserForm.Patient patient = new PatientUserForm.Patient();
             User user = userDao.getOne(patientUser.getPatientNum());
             patient.setId(patientUser.getId());
+            patient.setPatientNum(patientUser.getPatientNum());
             patient.setNicekName(user.getNickname());
             patient.setAge(user.getAge());
             patient.setGender(user.getGender());
@@ -106,6 +107,7 @@ public class PatientUserServiceImpl implements PatientInfoService {
         PatientUserForm.Patient patient = new PatientUserForm.Patient();
         User user = userDao.getOne(patientUser.getPatientNum());
         patient.setId(patientUser.getId());
+        patient.setPatientNum(patientUser.getPatientNum());
         patient.setNicekName(user.getNickname());
         patient.setAge(user.getAge());
         patient.setGender(user.getGender());
