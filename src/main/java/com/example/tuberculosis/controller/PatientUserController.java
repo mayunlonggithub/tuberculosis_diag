@@ -1,12 +1,9 @@
 package com.example.tuberculosis.controller;
-import com.example.tuberculosis.base.BeanPropertyCopyUtils;
+
 import com.example.tuberculosis.base.PageResult;
-import com.example.tuberculosis.base.PageUtils;
 import com.example.tuberculosis.base.Paging;
 import com.example.tuberculosis.base.ResponseResult;
 import com.example.tuberculosis.domain.dto.PatientUserForm;
-import com.example.tuberculosis.domain.dto.UserForm;
-import com.example.tuberculosis.domain.entity.PatientUser;
 import com.example.tuberculosis.domain.entity.User;
 import com.example.tuberculosis.service.PatientInfoService;
 import com.example.tuberculosis.utils.Constant;

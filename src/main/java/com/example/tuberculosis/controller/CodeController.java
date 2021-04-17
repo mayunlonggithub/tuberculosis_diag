@@ -4,8 +4,6 @@ import com.example.tuberculosis.base.ResponseResult;
 import com.example.tuberculosis.domain.dto.UserForm;
 import com.example.tuberculosis.domain.entity.PatientUser;
 import com.example.tuberculosis.domain.entity.User;
-import com.example.tuberculosis.domain.enums.BaseValue;
-import com.example.tuberculosis.service.Impl.PatientUserServiceImpl;
 import com.example.tuberculosis.service.PatientInfoService;
 import com.example.tuberculosis.service.UserService;
 import com.example.tuberculosis.utils.Constant;
@@ -14,7 +12,6 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

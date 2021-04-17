@@ -151,6 +151,8 @@ public class TuberImageServiceImpl implements TuberImageService {
             tuberUser.setNickname(patientUser.getNickname());
             tuberUser.setAccount(patientUser.getAccount());
             tuberUser.setDiagnosisRecord(tuberImage1.getDiagnosisRecord());
+            tuberUser.setStatus(tuberImage1.getStatus());
+            tuberUser.setStatus(tuberImage1.getStatus());
             userList.add(tuberUser);
         }
         PageResult<TuberImageForm.User> tuberPage = new PageResult<>();

@@ -125,19 +125,14 @@
             <version>1.16.10</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>zju.edu.als</groupId>
-            <artifactId>easy-util-python</artifactId>
-            <version>1.0.1</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>zju.edu.als</groupId>-->
+            <!--<artifactId>easy-util-python</artifactId>-->
+            <!--<version>1.0.1</version>-->
+        <!--</dependency>-->
         <!--<dependency>-->
             <!--<groupId>org.springframework.boot</groupId>-->
             <!--<artifactId>spring-boot-starter-security</artifactId>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.security</groupId>-->
-            <!--<artifactId>spring-security-test</artifactId>-->
-            <!--<scope>test</scope>-->
         <!--</dependency>-->
         <dependency>
             <groupId>commons-lang</groupId>
@@ -177,6 +172,7 @@
                     <defaultEncoding>UTF-8</defaultEncoding>
                 </configuration>
             </plugin>
+
 
         </plugins>
     </build>

@@ -1,13 +1,9 @@
 package com.example.tuberculosis.controller;
 
-import com.alibaba.fastjson.JSON;
 import com.example.tuberculosis.base.PageResult;
-import com.example.tuberculosis.base.PageUtils;
 import com.example.tuberculosis.base.Paging;
 import com.example.tuberculosis.base.ResponseResult;
-import com.example.tuberculosis.domain.dto.PatientUserForm;
 import com.example.tuberculosis.domain.dto.TuberImageForm;
-import com.example.tuberculosis.domain.dto.UserForm;
 import com.example.tuberculosis.domain.entity.User;
 import com.example.tuberculosis.domain.enums.BaseValue;
 import com.example.tuberculosis.service.TuberImageService;
@@ -18,7 +14,6 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.util.Assert;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -31,7 +26,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
-import zju.edu.als.MainWorker;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.constraints.NotNull;

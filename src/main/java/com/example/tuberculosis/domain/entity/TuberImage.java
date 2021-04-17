@@ -26,6 +26,7 @@ public class TuberImage extends CreateModifyTime {
     private String imageName;
     private Integer delFlag;
     private String diagnosisRecord;
+    private Integer status;
 
     @Id
     @Column(name = "id")
@@ -97,6 +98,16 @@ public class TuberImage extends CreateModifyTime {
 
     public void setDiagnosisRecord(String diagnosisRecord) {
         this.diagnosisRecord = diagnosisRecord;
+    }
+
+    @Basic
+    @Column(name = "status")
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 
 }

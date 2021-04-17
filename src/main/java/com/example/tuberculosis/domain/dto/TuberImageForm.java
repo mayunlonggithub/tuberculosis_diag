@@ -30,6 +30,8 @@ public class TuberImageForm {
         private String account;
         @ApiModelProperty(value = "诊疗记录")
         private String diagnosisRecord;
+        @ApiModelProperty(value = "诊疗状态")
+        private Integer status;
    }
 
     @Data
