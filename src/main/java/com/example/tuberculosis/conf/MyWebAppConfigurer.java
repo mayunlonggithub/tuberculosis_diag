@@ -20,5 +20,5 @@ public class MyWebAppConfigurer implements WebMvcConfigurer {
         int b=2;
         registry.addResourceHandler("/image/**").addResourceLocations("file:C:/users/administrator/data/image/");
     }
-}
+}s
     
