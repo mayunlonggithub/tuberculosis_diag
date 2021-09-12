@@ -37,6 +37,7 @@ public class GlobalExceptionHandler {
     public ResponseResult IllegalArgumentException(HttpServletRequest request, RuntimeException e) throws RuntimeException {
         e.printStackTrace();
         e.printStackTrace();
+        int a =1;
         logger.error("请求：{}, params:{}, 参数错误：{}", request.getRequestURI(), request.getParameterMap().toString(), e);
         return new ResponseResult(false,e.getMessage());
     }
