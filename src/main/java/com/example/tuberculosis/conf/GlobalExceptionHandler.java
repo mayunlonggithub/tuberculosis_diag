@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 @ControllerAdvice
 @ResponseBody
 public class GlobalExceptionHandler {
-    /**ss
+    /**skk
      * 日志
      */
     private Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
