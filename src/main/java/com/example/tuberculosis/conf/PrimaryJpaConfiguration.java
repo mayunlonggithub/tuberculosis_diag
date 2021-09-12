@@ -38,6 +38,8 @@ public class PrimaryJpaConfiguration {
     @Autowired
     private JpaProperties jpaProperties;
 
+    int a =1 ;
+
     @Primary
     @Bean("entityManagerPrimary")
     public EntityManager entityManager(EntityManagerFactoryBuilder builder) {
