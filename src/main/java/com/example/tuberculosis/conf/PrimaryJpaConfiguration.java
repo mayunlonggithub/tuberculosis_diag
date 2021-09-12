@@ -35,7 +35,6 @@ public class PrimaryJpaConfiguration {
     @Autowired
     @Qualifier("primaryDataSource")
     private DataSource primaryDataSource;
-
     @Autowired
     private JpaProperties jpaProperties;
 
