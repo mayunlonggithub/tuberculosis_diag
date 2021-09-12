@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * @author zr
  * @description 全局异常响应
- * @date 25/12/2017ss
+ * @date 25/12/2017ss ssssss
  */
 @ControllerAdvice
 @ResponseBody
